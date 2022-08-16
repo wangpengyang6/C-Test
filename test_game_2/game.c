@@ -27,8 +27,8 @@ void print_board(char board[ROWS][COLS], int row, int col)
 		}
 	}
 	printf("\n");
-	printf("    ");
-	for (i = 0; i <= row+1; i++)
+	printf("     ");
+	for (i = 0; i <= row+2; i++)
 	{
 		printf("——");
 	}
@@ -115,9 +115,8 @@ void clear_mine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 {
 	int x = 0;
 	int y = 0;
-	int win = 0;
 	print_board(show, ROW, COL);
-	while (win <= row * col - easy_Level)
+	while (1)
 	{
 		printf("请输入你想排查雷的坐标(类似于1 1):>");
 		scanf("%d %d", &x, &y);
@@ -133,17 +132,27 @@ void clear_mine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 			{
 				spread(show, mine, x, y);
 				print_board(show, ROW, COL);
-                win++;
 			}
 		}
 		else
 		{
 			printf("坐标输入错误,请重新输入\n");
 		}
-	}
-	if (win == row * col - easy_Level)
-	{
-		printf("恭喜你，排雷成功\n");
-		print_board(mine, ROW, COL);
+		int i = 0;
+		int win = 0;
+		for (i = 1; i <= ROW; i++)
+		{
+			int j = 0;
+			for (j = 1; j <= COL; j++)
+			{
+				if (show[i][j] == '*')
+					win++;
+			}
+		}
+		if (win == easy_Level)
+		{
+			printf("玩家获胜\n");
+			break;
+		}
 	}
 }
