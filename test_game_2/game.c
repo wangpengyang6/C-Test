@@ -16,7 +16,7 @@ void init_board(char board[ROWS][COLS], int rows, int cols, char net)
 void print_board(char board[ROWS][COLS], int row, int col)
 {
 	int i = 0;
-	printf("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ªÉ¨À×ÓÎÏ·¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª\n");
+	printf("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”æ‰«é›·æ¸¸æˆâ€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”\n");
 	printf("\n");
 	for (i = 0; i <= row; i++)
 	{
@@ -27,10 +27,10 @@ void print_board(char board[ROWS][COLS], int row, int col)
 		}
 	}
 	printf("\n");
-	printf("    ");
-	for (i = 0; i <= row+1; i++)
+	printf("     ");
+	for (i = 0; i <= row+2; i++)
 	{
-		printf("¡ª¡ª");
+		printf("â€”â€”");
 	}
 	printf("\n");
 
@@ -115,17 +115,16 @@ void clear_mine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 {
 	int x = 0;
 	int y = 0;
-	int win = 0;
 	print_board(show, ROW, COL);
-	while (win <= row * col - easy_Level)
+	while (1)
 	{
-		printf("ÇëÊäÈëÄãÏëÅÅ²éÀ×µÄ×ø±ê(ÀàËÆÓÚ1 1):>");
+		printf("è¯·è¾“å…¥ä½ æƒ³æ’æŸ¥é›·çš„åæ ‡(ç±»ä¼¼äº1 1):>");
 		scanf("%d %d", &x, &y);
 		if (x >= 1 && x <= row && y >= 1 && y <= col && show[x][y] == '*')
 		{
 			if (mine[x][y] == '1')
 			{
-				printf("²»ºÃÒâË¼£¬Äã±»À×Õ¨ÁË£¬ÓÎÏ·½áÊø\n");
+				printf("ä¸å¥½æ„æ€ï¼Œä½ è¢«é›·ç‚¸äº†ï¼Œæ¸¸æˆç»“æŸ\n");
 				print_board(mine, ROW, COL);
 				break;
 			}
@@ -137,12 +136,23 @@ void clear_mine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 		}
 		else
 		{
-			printf("×ø±êÊäÈë´íÎó,ÇëÖØĞÂÊäÈë\n");
+			printf("åæ ‡è¾“å…¥é”™è¯¯,è¯·é‡æ–°è¾“å…¥\n");
 		}
-	}
-	if (win == row * col - easy_Level)
-	{
-		printf("¹§Ï²Äã£¬ÅÅÀ×³É¹¦\n");
-		print_board(mine, ROW, COL);
+		int i = 0;
+		int win = 0;
+		for (i = 1; i <= ROW; i++)
+		{
+			int j = 0;
+			for (j = 1; j <= COL; j++)
+			{
+				if (show[i][j] == '*')
+					win++;
+			}
+		}
+		if (win == easy_Level)
+		{
+			printf("ç©å®¶è·èƒœ\n");
+			break;
+		}
 	}
 }
