@@ -31,7 +31,7 @@ int main()
     return 0;
 }
 
-ÇóÁ½¸öÊý¶þ½øÖÆÖÐ²»Í¬Î»µÄ¸öÊý
+æ±‚ä¸¤ä¸ªæ•°äºŒè¿›åˆ¶ä¸­ä¸åŒä½çš„ä¸ªæ•°
 
 int convertInteger(int A, int B) {
     int i = 0;
@@ -47,7 +47,7 @@ int convertInteger(int A, int B) {
     }
     return sum;
 }
-Leetcode ÃæÊÔÌâ 05.06.ÕûÊý×ª»»
+Leetcode é¢è¯•é¢˜ 05.06.æ•´æ•°è½¬æ¢
 
 
 int dominantIndex(int* nums, int numsSize) {
@@ -70,5 +70,4 @@ int dominantIndex(int* nums, int numsSize) {
     }
     return max >= 2 * less ? index : -1;
 }
-
-leetcode 747. ÖÁÉÙÊÇÆäËûÊý×ÖÁ½±¶µÄ×î´óÊý
+leetcode 747. è‡³å°‘æ˜¯å…¶ä»–æ•°å­—ä¸¤å€çš„æœ€å¤§æ•°
