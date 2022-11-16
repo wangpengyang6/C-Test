@@ -60,4 +60,5 @@ int main()
 	return 0;
 }
 
-qsort π”√¡∑œ∞
+
+qsort πœ∞
