@@ -14,7 +14,7 @@ int main()
     return 0;
 }
 
-BC47 - ÅĞ¶ÏÊÇ²»ÊÇ×ÖÄ¸
+BC47 - åˆ¤æ–­æ˜¯ä¸æ˜¯å­—æ¯
 
 #include<stdio.h>
 int main()
@@ -33,7 +33,7 @@ int main()
     return 0;
 }
 
-BC54 - »ñµÃÔÂ·İÌìÊı
+BC54 - è·å¾—æœˆä»½å¤©æ•°
 
 #include<stdio.h>
 int main()
@@ -50,7 +50,7 @@ int main()
     return 0;
 }
 
-BC48 - ×ÖÄ¸´óĞ¡Ğ´×ª»»
+BC48 - å­—æ¯å¤§å°å†™è½¬æ¢
 
 #include<stdio.h>
 int main()
@@ -80,4 +80,5 @@ int main()
     return 0;
 }
 
-BC37 - Íø¹º
+
+BC37 - ç½‘è´­
