@@ -10,24 +10,24 @@ void menu()
 
 void game()
 {
-	printf("²ÂÊı×ÖĞ¡ÓÎÏ·\n");
+	printf("çŒœæ•°å­—å°æ¸¸æˆ\n");
 	int num = rand() % 100 + 1;
 	int n = 0;
 	while (1)
 	{
-		printf("ÇëÊäÈëÄã²ÂµÄÊı×Ö(1-100):>");
+		printf("è¯·è¾“å…¥ä½ çŒœçš„æ•°å­—(1-100):>");
 		scanf("%d", &n);
 		if (n > num)
 		{
-			printf("²ÂµÄÊı×Ö´óÁË\n");
+			printf("çŒœçš„æ•°å­—å¤§äº†\n");
 		}
 		else if (n < num)
 		{
-			printf("²ÂµÄÊı×ÖĞ¡ÁË\n");
+			printf("çŒœçš„æ•°å­—å°äº†\n");
 		}
 		else
 		{
-			printf("¹§Ï²Äã²Â¶ÔÁË!!\n");
+			printf("æ­å–œä½ çŒœå¯¹äº†!!\n");
 			break;
 		}
 	}
@@ -40,7 +40,7 @@ int main()
 	do
 	{
 		menu();
-		printf("ÇëÊäÈë1/0£º");
+		printf("è¯·è¾“å…¥1/0ï¼š");
 		scanf("%d",&input);
 		switch (input)
 		{
@@ -48,10 +48,10 @@ int main()
 			game();
 			break;
 		case 0:
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("ÊäÈë´íÎóÇëÖØĞÂÊäÈë\n");
+			printf("è¾“å…¥é”™è¯¯è¯·é‡æ–°è¾“å…¥\n");
 			break;
 		}
 	} while (input);
@@ -201,7 +201,7 @@ int main()
 		arr2[left] = arr1[left];
 		arr2[right] = arr1[right];
 		printf("%s\n", arr2);
-		Sleep(200);//windowÏÂSleepº¯Êı²ÎÊıµÄµ¥Î»ÊÇºÁÃë
+		Sleep(200);//windowä¸‹Sleepå‡½æ•°å‚æ•°çš„å•ä½æ˜¯æ¯«ç§’
 		system("cls");
 		left++;
 		right--;
@@ -210,12 +210,13 @@ int main()
 	return 0;
 }
 
+
 #include<stdio.h>
 #include<string.h>
 int main()
 {
 	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);//Êı×éµÄÔªËØ¸öÊı
+	int sz = sizeof(arr) / sizeof(arr[0]);//æ•°ç»„çš„å…ƒç´ ä¸ªæ•°
 	int left = 0;
 	int right = sz-1;
 	int k = 0;
@@ -234,12 +235,12 @@ int main()
 		}
 		else
 		{
-			printf("ÕÒµ½ÁË£¬ÏÂ±êÊÇ:%d\n", mid);
+			printf("æ‰¾åˆ°äº†ï¼Œä¸‹æ ‡æ˜¯:%d\n", mid);
 			break;
 		}
 	}
 	if (left > right)
-		printf("ÕÒ²»µ½\n");
+		printf("æ‰¾ä¸åˆ°\n");
 
 	return 0;
 }
@@ -248,25 +249,25 @@ int main()
 int main()
 {
 	int i = 0;
-	char password[20] = { 0 };//¼ÙÉèÕıÈ·ÃÜÂëÊÇsososopy
+	char password[20] = { 0 };//å‡è®¾æ­£ç¡®å¯†ç æ˜¯sososopy
 	for (i = 0; i < 3; i++)
 	{
-		printf("ÇëÊäÈëÃÜÂë:>");
+		printf("è¯·è¾“å…¥å¯†ç :>");
 		scanf("%s", password);
-		//ÅĞ¶ÏÃÜÂëÕıÈ·ĞÔ
+		//åˆ¤æ–­å¯†ç æ­£ç¡®æ€§
 		if (strcmp(password, "sososopy") == 0)
 		{
-			printf("ÃÜÂëÕıÈ·£¬µÇÂ½³É¹¦\n");
+			printf("å¯†ç æ­£ç¡®ï¼Œç™»é™†æˆåŠŸ\n");
 			break;
 		}
 		else
 		{
-			printf("ÃÜÂë´íÎó\n");
+			printf("å¯†ç é”™è¯¯\n");
 		}
 	}
 	if (i == 3)
 	{
-		printf("Èı´ÎÃÜÂë´íÎó£¬ÍË³ö³ÌĞò\n");
+		printf("ä¸‰æ¬¡å¯†ç é”™è¯¯ï¼Œé€€å‡ºç¨‹åº\n");
 	}
 	return 0;
 }
