@@ -1,124 +1,123 @@
 #define  _CRT_SECURE_NO_WARNINGS 1
-//#include <stdio.h>
-//int main()
-//{
-//	int a = 0, b = 0;
-//	for (a = 1, b = 1; a <= 100; a++)
-//	{
-//		if (b >= 20) break;
-//		if (b % 3 == 1)
-//		{
-//			b = b + 3;
-//			continue;
-//		}
-//		b = b - 5;
-//	}
-//	printf("%d\n", a);
-//	return 0;
-//}
+#include <stdio.h>
+int main()
+{
+	int a = 0, b = 0;
+	for (a = 1, b = 1; a <= 100; a++)
+	{
+		if (b >= 20) break;
+		if (b % 3 == 1)
+		{
+			b = b + 3;
+			continue;
+		}
+		b = b - 5;
+	}
+	printf("%d\n", a);
+	return 0;
+}
 
-//#include<stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	float sum = 0.0;
-//	for (i = 1; i < 101; i++)
-//	{
-//		if (i % 2 == 0)
-//		{
-//			sum -= 1.0 / i;
-//		}
-//		else
-//			sum += 1.0 / i;
-//	}
-//	printf("%.2f",sum);
-//	return 0;
-//}
-//¼ÆËã1/1-1/2+1/3-1/4+1/5 ¡­¡­ + 1/99 - 1/100 µÄÖµ
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	float sum = 0.0;
+	for (i = 1; i < 101; i++)
+	{
+		if (i % 2 == 0)
+		{
+			sum -= 1.0 / i;
+		}
+		else
+			sum += 1.0 / i;
+	}
+	printf("%.2f",sum);
+	return 0;
+}
+è®¡ç®—1/1-1/2+1/3-1/4+1/5 â€¦â€¦ + 1/99 - 1/100 çš„å€¼
 
-//#include<stdio.h>
-//int main()
-//{
-//	int i = 0;
-//	int count = 0;
-//	for (i = 1; i < 101; i++)
-//	{
-//		if (i / 10 == 9)
-//		{
-//			count++;
-//		}
-//
-//		if (i % 10 == 9)
-//		{
-//			count++;
-//		}
-//	}
-//	printf("%d",count);
-//	return 0;
-//}
-// 1µ½ 100 µÄËùÓĞÕûÊıÖĞ³öÏÖ¶àÉÙ¸öÊı×Ö9
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	int count = 0;
+	for (i = 1; i < 101; i++)
+	{
+		if (i / 10 == 9)
+		{
+			count++;
+		}
 
-//#include<stdio.h>
-//#include<stdlib.h>
-//#include<time.h>
-//void menu()
-//{
-//	printf("**************************\n");
-//	printf("*********1.paly***********\n");
-//	printf("*********0.exit***********\n");
-//	printf("**************************\n");
-//}
-//void game()
-//{
-//	int n = 0;
-//	int ret = rand() % 100 + 1;
-//	while (1)
-//	{
-//		printf("ÇëÊäÈëÄãËù²ÂÏëµÄÊı×Ö£º");
-//		scanf("%d", &n);
-//		if (ret < n)
-//		{
-//			printf("´óÁË\n");
-//		}
-//		else if (ret > n)
-//		{
-//			printf("Ğ¡ÁË\n");
-//		}
-//		else
-//		{
-//			printf("¹§Ï²Äã²Â¶ÔÁË\n");
-//			break;
-//		}
-//	}
-//}
-//int main()
-//{
-//	srand((unsigned int)time(NULL));
-//	int i = 0;
-//	do
-//	{
-//		menu();
-//		printf("ÇëÊäÈë1/0£º");
-//		scanf("%d", &i);
-//		switch (i)
-//		{
-//		case 1:
-//			game();
-//			break;
-//		case 0:
-//			printf("ÍË³öÓÎÏ·\n");
-//			break;
-//		default:
-//			printf("ÊäÈë´íÎóÇëÖØĞÂÊäÈë\n");
-//			break;
-//		}
-//	} while (i);
-//	return 0;
-//}
+		if (i % 10 == 9)
+		{
+			count++;
+		}
+	}
+	printf("%d",count);
+	return 0;
+}
+1åˆ° 100 çš„æ‰€æœ‰æ•´æ•°ä¸­å‡ºç°å¤šå°‘ä¸ªæ•°å­—9
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void menu()
+{
+	printf("**************************\n");
+	printf("*********1.paly***********\n");
+	printf("*********0.exit***********\n");
+	printf("**************************\n");
+}
+void game()
+{
+	int n = 0;
+	int ret = rand() % 100 + 1;
+	while (1)
+	{
+		printf("è¯·è¾“å…¥ä½ æ‰€çŒœæƒ³çš„æ•°å­—ï¼š");
+		scanf("%d", &n);
+		if (ret < n)
+		{
+			printf("å¤§äº†\n");
+		}
+		else if (ret > n)
+		{
+			printf("å°äº†\n");
+		}
+		else
+		{
+			printf("æ­å–œä½ çŒœå¯¹äº†\n");
+			break;
+		}
+	}
+}
+int main()
+{
+	srand((unsigned int)time(NULL));
+	int i = 0;
+	do
+	{
+		menu();
+		printf("è¯·è¾“å…¥1/0ï¼š");
+		scanf("%d", &i);
+		switch (i)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("é€€å‡ºæ¸¸æˆ\n");
+			break;
+		default:
+			printf("è¾“å…¥é”™è¯¯è¯·é‡æ–°è¾“å…¥\n");
+			break;
+		}
+	} while (i);
+	return 0;
+}
 
 
-//²ÂÊı×Ö
-
+//çŒœæ•°å­—
 
 #include<stdio.h>
 void sort(int arr[], int sz, int k)
@@ -138,13 +137,13 @@ void sort(int arr[], int sz, int k)
 		}
 		else
 		{
-			printf("ÕÒµ½ÁË,ÏÂ±êÊÇ:%d", mid);
+			printf("æ‰¾åˆ°äº†,ä¸‹æ ‡æ˜¯:%d", mid);
 			break;
 		}
 	}
 	if (left > right)
 	{
-		printf("ÕÒ²»µ½ ");
+		printf("æ‰¾ä¸åˆ° ");
 	}
 
 }
@@ -156,4 +155,4 @@ int main()
 	sort(arr, sz,k);
 	return 0;
 }
-//¶ş·Ö²éÕÒ
+//äºŒåˆ†æŸ¥æ‰¾

@@ -23,10 +23,9 @@ void quick_sort(int p[], int l, int r)
     }
     quick_sort(p, l, j);
     quick_sort(p, j + 1, r);
-
 }
 
-¿ìËÙÅÅĞò
+å¿«é€Ÿæ’åº
 
 
 
@@ -60,7 +59,7 @@ void merge_sort(int p[], int l, int r)
     }
 }
 
-¹é²¢ÅÅĞò
+å½’å¹¶æ’åº
 
 
 
@@ -101,7 +100,7 @@ int main()
     return 0;
 }
 
-µÚk¸öÊı
+ç¬¬kä¸ªæ•°
 
 
 
@@ -155,4 +154,4 @@ int main()
 }
 
 
-ÄæĞò¶ÔÊıÁ¿
+é€†åºå¯¹æ•°é‡

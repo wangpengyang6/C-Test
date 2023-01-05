@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-BC51 三角形判断
+BC51 
 
 #include<stdio.h>
 int main()
@@ -52,7 +52,7 @@ int main()
         printf("E\n");
 }
 
-BC40 - 竞选社长
+BC40 
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -77,7 +77,7 @@ int main()
     return 0;
 }
 
-BC76 公务员面试
+BC76 
 
 #include<stdio.h>
 int main()
@@ -107,7 +107,7 @@ int main()
     return 0;
 }
 
-BC74 HTTP状态码
+BC74 
 
 #include<stdio.h>
 #include<string.h>
